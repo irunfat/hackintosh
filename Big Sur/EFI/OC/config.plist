@@ -251,6 +251,17 @@
 	<dict>
 		<key>Add</key>
 		<dict>
+			<key>PciRoot(0x0)/Pci(0x1,0x3)/Pci(0x0,0x2)/Pci(0x1,0x0)/Pci(0x0,0x0) - 2</key>
+			<dict>
+				<key>Compatible </key>
+				<string>pci14e4, 4353</string>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,1,3/0,2/1,0/0,0</string>
+				<key>device_type</key>
+				<string>Network controller</string>
+				<key>model</key>
+				<string>BCM4352 802.11ac Wireless Network Adapter</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x3)</key>
 			<dict>
 				<key>layout-id</key>
@@ -398,6 +409,86 @@
 				<string>Any</string>
 				<key>BundlePath</key>
 				<string>RestrictEvents.kext</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>Enabled</key>
+				<true/>
+				<key>MinKernel</key>
+				<string></string>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/AirportBrcmFixup</string>
+				<key>BundlePath</key>
+				<string>AirPortBrcmFixup4360.kext</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AirportbrcmNIC_injector.kext</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/plugins/AirPortBrcmNIC_Injector.kext/Contents/Info.plist</string>
+				<key>Enabled</key>
+				<true/>
+				<key>MinKernel</key>
+				<string></string>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>BundlePath</key>
+				<string>AirPortBrcmFixup4360.kext</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>Enabled</key>
+				<true/>
+				<key>MinKernel</key>
+				<string></string>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>BundlePath</key>
+				<string>BrcmBluetoothInjector.kext</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>Enabled</key>
+				<true/>
+				<key>MinKernel</key>
+				<string></string>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/BrcmFirmwareData</string>
+				<key>BundlePath</key>
+				<string>BrcmFirmwareData.kext</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>Enabled</key>
+				<true/>
+				<key>MinKernel</key>
+				<string></string>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/BrcmPatchRAM3</string>
+				<key>BundlePath</key>
+				<string>BrcmPatchRAM3.kext</string>
 			</dict>
 		</array>
 		<key>Block</key>
@@ -1243,7 +1334,7 @@
 				Rg==
 				</data>
 				<key>boot-args</key>
-				<string>debug=0x100 keepsyms=1 npci=0x2000 agdpmod=pikera keepsyms=1 alcid=1</string>
+				<string>brcmfx-driver=2 debug=0x100 keepsyms=1 npci=0x2000 agdpmod=pikera keepsyms=1 alcid=1</string>
 				<key>csr-active-config</key>
 				<data>
 				AAAAAA==
@@ -1319,7 +1410,7 @@
 			<false/>
 			<key>MLB</key>
 			<string>F5K010207J9K3F7A8</string>
-			<key>Edit Here</key>
+			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>ProcessorType</key>
 			<integer>0</integer>
@@ -1334,9 +1425,9 @@
 			<key>SystemProductName</key>
 			<string>MacPro7,1</string>
 			<key>SystemSerialNumber</key>
-			<string>Edit Here</string>
+			<string>F5KCDLY7P7QM</string>
 			<key>SystemUUID</key>
-			<string>Edit Here</string>
+			<string>BCBE4701-B167-4EB9-AA35-03479ADAFDA8</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
